@@ -1,0 +1,45 @@
+.animate-to-top {
+  position: relative;
+  animation: animate-to-top 1s ease 1s 1 forwards;
+  @include opacity(0);
+}
+@-webkit-keyframes animate-to-top {
+  from {
+    top: 50px;
+    @include opacity(0);
+  }
+  to {
+    top: 0;
+    @include opacity(1);
+  }
+}
+@-moz-keyframes animate-to-top {
+  from {
+    top: 50px;
+    @include opacity(0);
+  }
+  to {
+    top: 0;
+    @include opacity(1);
+  }
+}
+@-ms-keyframes animate-to-top {
+  from {
+    top: 50px;
+    @include opacity(0);
+  }
+  to {
+    top: 0;
+    @include opacity(1);
+  }
+}
+@keyframes animate-to-top {
+  from {
+    top: 50px;
+    @include opacity(0);
+  }
+  to {
+    top: 0;
+    @include opacity(1);
+  }
+}

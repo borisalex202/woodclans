@@ -1,0 +1,25 @@
+{
+  "name": "woodclans",
+  "authors": [
+    "Alexander Boris <index.wow202@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "2.1.*",
+    "html5shiv": "*",
+    "bootstrap-sass": "3.*",
+    "jquery-form-styler": "1.7.6",
+    "slick-carousel": "^1.6.0",
+    "jScrollPane": "jscrollpane#^2.0.23",
+    "jssocials": "^1.4.0"
+  }
+}

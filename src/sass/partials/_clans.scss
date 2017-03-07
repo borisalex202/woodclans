@@ -1,0 +1,156 @@
+.clan {
+  &-block {
+    h3 {
+      margin: 0 0 15px;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    .all {
+      float: right;
+      font-size: 13px;
+      color: $main-color;
+    }
+  }
+  &-container {
+    width: calc(100% + 20px);
+    margin: 0 -10px;
+    @include flexbox();
+    @include flex-wrap(wrap);
+
+    &.col-2 {
+      width: calc(100% + 25px);
+      margin: 0 -12.5px;
+      
+      .clan {
+        &-item {
+          width: calc(50% - 25px);
+          margin: 0 12.5px 25px;
+        }
+        &-thumb {
+          height: 225px;
+        }
+        &-content {
+          position: relative;
+
+          .name {
+            margin-bottom: 5px;
+          }
+          .category {
+            display: inline-block;
+            margin-right: 10px;
+          }
+          .followers {
+            margin-bottom: 0;
+          }
+          .join {
+            position: absolute;
+            top: 13px;
+            right: 13px;
+            margin-top: 0;
+          }
+        }
+      }
+      @media (max-width: $screen-xs-max) {
+        .clan {
+          &-item {
+            width: calc(100% - 25px);
+          }
+          &-content {
+            .followers {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-item {
+    width: calc(20% - 20px);
+    border: 1px solid $border-color;
+    border-radius: 2px;
+    margin: 0 10px 40px;
+  }
+  &-thumb {
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 2px 2px 0 0;
+
+    img {
+      border-radius: 2px 2px 0 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 100%;
+      min-width: 100%;
+      max-width: none;
+    }
+  }
+  &-content {
+    border-top: 1px solid $border-color;
+    padding: 13px;
+
+    .name {
+      display: block;
+      margin-bottom: 13px;
+      font-weight: 500;
+    }
+    .followers {
+      margin-bottom: 13px;
+      color: $gray-color;
+    }
+    .join {
+      padding-top: 6px;
+      padding-bottom: 6px;
+      display: inline-block;
+    }
+  }
+  &-links {
+    margin-bottom: 30px;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 10px;
+
+      &.create {
+        float: right;
+        margin: 0;
+      }
+    }
+  }
+  @media (max-width: $screen-sm-max) {
+    &-item {
+      width: calc(50% - 20px);
+    }
+    &-thumb {
+      height: 200px;
+    }
+    &-content {
+      position: relative;
+      padding-right: 90px;
+
+      .followers {
+        margin-bottom: 0;
+      }
+      .join {
+        position: absolute;
+        top: 13px;
+        right: 13px;
+        margin-top: 0;
+      }
+    }
+  }
+  @media (max-width: $screen-xs-max) {
+    &-container {
+      margin: 0;
+      width: 100%;
+    }
+    &-item {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}

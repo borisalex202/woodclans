@@ -1,0 +1,228 @@
+.profile {
+  h3 {
+    font-size: 16px;
+    margin: 0;
+  }
+  &-nav {
+    border-radius: 2px;
+    border: 1px solid $border-color;
+
+    &_thumb {
+      border-radius: 2px 2px 0 0 ;
+      padding: 12px;
+      background-color: #E5E8E9;
+      background-size: cover !important;
+
+      img {
+        max-width: 66px;
+        max-height: 66px;
+        border-radius: 2px;
+      }
+    }
+    &_info {
+      padding: 10px;
+
+      span {
+        font-size: 13px;
+        display: inline-block;
+
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+      .name {
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+    &_links {
+      border-top: 1px solid $border-color;
+      padding: 20px 10px;
+
+      ul {
+        li {
+          margin-bottom: 9px;
+
+          a {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  &-head {
+    position: relative;
+    min-height: 410px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &.mini {
+      min-height: 0;
+      background-color: #F5F5F5;
+
+      .container {
+        position: static;
+        padding: 32px 0 32px 95px;
+      }
+      .profile {
+        &-details {
+          .name,
+          .followers,
+          .following,
+          .icon-soc .fa {
+            color: $text-color;
+          }
+          .follow {
+            color: $text-color;
+
+            &:before,
+            &:after {
+              background: $text-color;
+            }
+            &:hover {
+              color: $white;
+
+              &:before,
+              &:after {
+                background: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 32px 0 32px 95px;
+      @include flexbox();
+      @include align-items(flex-end);
+    }
+  }
+  &-info {
+    @include flexbox();
+  }
+  &-thumb {
+    position: relative;
+    width: 66px;
+    height: 66px;
+    overflow: hidden;
+    margin-right: 17px;
+  }
+  &-details {
+    width: calc(100% - 66px);
+
+    .name {
+      color: $white;
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
+    .followers,
+    .following {
+      display: inline-block;
+      color: $white;
+      font-size: 15px;
+      margin-right: 12px;
+    }
+    .icon-soc {
+      .fa {
+        margin: 0 5px;
+        font-size: 20px;
+        color: $white;
+      }
+    }
+    .follow {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: inline-block;
+      color: $white;
+      margin-left: 15px;
+      margin-right: 30px;
+
+      &:before,
+      &:after {
+        background: $white;
+      }
+      &:hover {
+        &:before {
+          height: 14px;
+          top: 9px;
+          left: 10px;
+          background: $white;
+          @include rotate(-45deg);
+        }
+        &:after {
+          height: 14px;
+          top: 9.5px;
+          left: 10px;
+          background: $white;
+          @include rotate(45deg);
+        }
+      }
+    }
+  }
+  @media (max-width: $screen-md-max) {
+    &-head {
+      min-height: 0;
+
+      &.mini {
+        .container {
+          padding: 32px 15px;
+        }
+      }
+      .container {
+        padding: 32px 15px;
+        position: static;
+      }
+    }
+  }
+  @media (max-width: $screen-sm-max) {
+    &-details {
+      .name {
+        margin-bottom: 0;
+      }
+      .followers,
+      .following {
+        margin-bottom: 10px;
+      }
+      .follow {
+        margin-left: 0;
+      }
+    }
+    .author-bio.mobile {
+      border: 0;
+      padding: 0 10px;
+
+      h3 {
+        margin-top: 0;
+        font-size: 16px;
+      }
+      span,
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+  @media (max-width: $screen-xs-max) {
+    &-head {
+      &.mini {
+       .container {
+         padding: 20px 10px;
+       }
+      }
+      .container {
+        padding: 20px 10px;
+      }
+    }
+    &-details {
+      .followers,
+      .following {
+        margin-right: 5px;
+      }
+    }
+  }
+}

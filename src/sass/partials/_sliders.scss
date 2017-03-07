@@ -1,0 +1,28 @@
+.slider {
+  &-clans {
+    .slick {
+      &-track {
+        @include flexbox();
+
+        @media (max-width: $screen-md-max) {
+          margin: 0 -15px 0 15px;
+        }
+        @media (max-width: $screen-xs-max) {
+          margin: 0 12px 0 10px;
+        }
+      }
+      &-list {
+        overflow: auto;
+      }
+      &-slide {
+        width: 240px !important;
+        margin: 0 10px !important;
+      }
+    }
+  }
+}
+.slick {
+  &-slide {
+    outline: none !important;
+  }
+}

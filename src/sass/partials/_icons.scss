@@ -1,0 +1,117 @@
+.icon {
+  @include transition(all .3s ease);
+
+  &-menu {
+    display: none;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    min-width: 30px;
+    cursor: pointer;
+
+    .icon-bar {
+      position: relative;;
+      display: block;
+      width: 20px;
+      height: 3px;
+      margin-bottom: 4px;
+      background: $black;
+      border-radius: 0;
+
+      @include transition(all .3s ease);
+    }
+    @media (max-width: $screen-sm-max) {
+      display: block;
+    }
+  }
+  &-cross {
+    max-width: 42px;
+    max-height: 30px;
+    color: $text-color;
+    cursor: pointer;
+    position: relative;
+    top: -4px;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+  &-logo {
+    &-desk {
+      max-width: 120px;
+      max-height: 18px;
+      color: #141414;
+    }
+    &-mob {
+      max-width: 67px;
+      max-height: 18px;
+      color: #141414;
+    }
+  }
+  &-search {
+    max-width: 14px;
+    max-height: 14px;
+    color: #0d0d0d;
+  }
+  &-alerts {
+    max-width: 10px;
+    max-height: 17px;
+    color: #141414;
+    position: relative;
+    top: 3px;
+  }
+  &-like {
+    max-width: 19px;
+    max-height: 18px;
+    color: $text-color;
+
+    &-full {
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 19px;
+      max-height: 18px;
+      color: $main-color;
+      @include opacity(0);
+    }
+  }
+  &-messages {
+    max-width: 17px;
+    max-height: 17px;
+
+    &-full {
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 17px;
+      max-height: 17px;
+      color: $main-color;
+      @include opacity(0);
+    }
+  }
+  &-share {
+    max-width: 16px;
+    max-height: 19px;
+    color: $text-color;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+  &-more {
+    max-width: 3px;
+    max-height: 14px;
+    color: $text-color;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+  &-arrow {
+    &-top {
+      max-width: 12px;
+      max-height: 7px;
+      color: $gray-color;
+    }
+  }
+}
