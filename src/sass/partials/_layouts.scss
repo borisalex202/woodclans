@@ -271,11 +271,12 @@
         position: relative;
         top: 0;
         left: 0;
-        margin: 0 0 0 5px;
+        margin: 0 0 0 3px;
+        padding: 3px 5px;
 
         .icon {
-          max-width: 19px;
-          max-height: 19px;
+          max-width: 14px;
+          max-height: 14px;
         }
       }
       &.mobile {
@@ -360,7 +361,7 @@
     &.join,
     &.follow {
       position: relative;
-      padding-left: 25px;
+      padding-left: 30px;
       cursor: pointer;
       @include transition(all .3s ease);
 
@@ -368,8 +369,7 @@
         cursor: pointer;
         padding-left: 10px;
 
-        &:before,
-        &:after {
+        .icon {
           display: none;
         }
         &:hover {
@@ -381,53 +381,66 @@
         border: 1px solid $main-color;
         background: $main-color;
 
-        &:before {
-          height: 14px;
-          top: 10px;
-          left: 10px;
-          background: $white;
-          @include rotate(-45deg);
+        .icon-check {
+          color: $white;
+          @include opacity(0);
+          @include transition(all .3s ease);
         }
-        &:after {
-          height: 14px;
-          top: 10.5px;
-          left: 10px;
-          background: $white;
-          @include rotate(45deg);
+        .icon-cross {
+          color: $white;
+          @include opacity(1);
         }
       }
       &:focus {
         border: 1px solid #3F38AE;
         background: #3F38AE;
       }
-      &:before {
-        content: '';
+      .icon-check {
+        display: block;
         position: absolute;
-        top: 14px;
-        left: 9px;
-        width: 1.5px;
-        height: 7px;
-        background: $text-color;
-        @include rotate(-45deg);
+        top: 7px;
+        left: 5px;
+        max-width: 20px;
+        max-height: 20px;
         @include transition(all .3s ease);
       }
-      &:after {
-        content: '';
+      .icon-cross {
+        display: block;
         position: absolute;
-        top: 10px;
-        left: 15px;
-        width: 1.5px;
-        height: 12px;
-        background: $text-color;
-        @include rotate(40deg);
+        top: 9px;
+        left: 6px;
+        max-width: 17px;
+        max-height: 17px;
+        @include opacity(0);
         @include transition(all .3s ease);
+      }
+    }
+    &.follow {
+      .icon-check {
+        top: 6px;
+      }
+      .icon-cross {
+        top: 7px;
       }
     }
     &.create-new {
       position: absolute;
-      top: 30px;
-      right: 25px;
+      top: -30px;
+      right: 15px;
 
+      &:hover,
+      &:active:focus {
+        background: $btn-default-bg-hover;
+        border: 1px solid $btn-default-bg-hover;
+        color: $white;
+      }
+      &:focus,
+      &:active,
+      &:active:hover {
+        background: $btn-default-bg-active;
+        border: 1px solid $btn-default-bg-active;
+        color: $white;
+      }
       @media (max-width: $screen-sm-max) {
         position: relative;
         top: 0;
@@ -448,8 +461,8 @@
   .back {
     font-weight: 500;
     position: absolute;
-    top: 30px;
-    left: 25px;
+    top: -30px;
+    left: 15px;
 
     @media (max-width: $screen-sm-max) {
       top: 15px;
@@ -618,5 +631,13 @@
     &.active {
       display: block;
     }
+  }
+}
+.alerts-btn {
+  padding: 2px 7px;
+
+  .icon {
+    max-width: 8px;
+    max-height: 15px;
   }
 }

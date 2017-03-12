@@ -131,27 +131,27 @@
 
     $('.join').on('click', function () {
         if($(this).hasClass('not')) {
-            $(this).text('Joined').removeClass('not');
+            $(this).find('.text').text('Joined').parent().removeClass('not');
         } else {
-            $(this).text('Join').addClass('not');
+            $(this).find('.text').text('Join').parent().addClass('not');
         }
     });
     $('.follow')
         .on('click', function () {
             if($(this).hasClass('not')) {
-                $(this).text('Following').removeClass('not');
+                $(this).find('.text').text('Following').parent().removeClass('not');
             } else {
-                $(this).text('Follow').addClass('not');
+                $(this).find('.text').text('Follow').parent().addClass('not');
             }
         })
         .mouseover(function () {
             if(!$(this).hasClass('not')) {
-                $(this).text('Unfollow');
+                $(this).find('.text').text('Unfollow');
             }
         })
         .mouseout(function () {
             if(!$(this).hasClass('not')) {
-                $(this).text('Following')
+                $(this).find('.text').text('Following')
             }
         });
 

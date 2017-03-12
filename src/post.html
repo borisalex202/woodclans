@@ -29,8 +29,10 @@
 
 					<div class="post-comments">
 						<h3>Comments</h3>
-						<textarea name="" rows="3"></textarea>
-						<button class="btn btn-default">Post</button>
+						<div class="comment-block">
+							<textarea name="" rows="3"></textarea>
+							<button class="btn btn-default disabled">Post</button>
+						</div>
 
 						<div class="post-comments-item">
 							<svg class="icon icon-more"><use xlink:href="#icon-more"></use></svg>
@@ -189,6 +191,13 @@
 					});
 				}
 
+				$('.comment-block').find('textarea').keyup(function () {
+					if($(this).val().length > 0) {
+					    $(this).next('.btn').removeClass('disabled').addClass('active');
+					} else {
+                        $(this).next('.btn').removeClass('active').addClass('disabled');
+					}
+                });
                 $("#share").jsSocials({
                     shares: ["vkontakte", "facebook", "googleplus", "twitter"]
                 });

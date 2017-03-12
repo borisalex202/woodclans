@@ -27,6 +27,17 @@
       border: 1px solid $btn-default-bg-active;
       color: $white;
     }
+    &.active {
+      background: $btn-default-bg-hover;
+      border: 1px solid $btn-default-bg-hover;
+      color: $white;
+
+      &:hover {
+        background: $btn-default-bg-active;
+        border: 1px solid $btn-default-bg-active;
+        color: $white;
+      }
+    }
   }
   &-info {
     border: 0;
@@ -55,6 +66,12 @@
       &:hover {
         background-image: url('../img/svg/question-white.svg');
       }
+    }
+  }
+  &.disabled {
+    &:hover {
+      background: inherit;
+      color: inherit;
     }
   }
   @for $btn from 20 through 50 {

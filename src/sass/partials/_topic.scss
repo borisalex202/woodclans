@@ -17,10 +17,15 @@
   }
   @media (max-width: $screen-xs-max) {
     &-item {
-      text-align: center;
+      font-size: 20px;
+      text-align: left;
+      padding: 15px 10px 15px 20px;
+      @include flexbox();
+      @include align-items(center);
 
       .join {
         float: none;
+        margin: 0 0 0 auto;
       }
     }
   }
