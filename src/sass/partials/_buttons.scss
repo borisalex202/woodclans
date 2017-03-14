@@ -14,6 +14,9 @@
     border-radius: 2px;
     color: $gray-color;
 
+    &.black {
+      color: $text-color;
+    }
     &:hover,
     &:active:focus {
       background: $btn-default-bg-hover;
@@ -36,6 +39,32 @@
         background: $btn-default-bg-active;
         border: 1px solid $btn-default-bg-active;
         color: $white;
+      }
+    }
+  }
+  &-primary {
+    background: $btn-default-bg-active;
+    border: 1px solid $btn-default-bg-active;
+    color: $white;
+    border-radius: 2px;
+
+    &:hover,
+    &:active:focus {
+      background: $btn-default-bg-hover;
+      border: 1px solid $btn-default-bg-hover;
+      color: $white;
+    }
+    &:focus,
+    &:active,
+    &:active:hover {
+      background: $btn-default-bg-hover;
+      border: 1px solid $btn-default-bg-hover;
+      color: $white;
+    }
+    &.disabled {
+      &:hover {
+        background: $btn-default-bg-active !important;
+        color: #fff !important;
       }
     }
   }
@@ -74,30 +103,17 @@
       color: inherit;
     }
   }
-  @for $btn from 20 through 50 {
+  @for $btn from 12 through 50 {
     @if $btn % 2 == 0 {
-      &.btn-#{$btn} {
+      &.btn-h-#{$btn} {
         padding-left: $btn#{'px'};
         padding-right: $btn#{'px'};
 
-        &-md {
-          @media screen and (min-width: $screen-md) {
-            padding-left: $btn#{'px'};
-            padding-right: $btn#{'px'};
-          }
-        }
-        &-sm {
-          @media screen and (max-width: $screen-sm-max) {
-            padding-left: $btn#{'px'};
-            padding-right: $btn#{'px'};
-          }
-        }
-        &-xs {
-          @media screen and (max-width: $screen-xs-max) {
-            padding-left: $btn#{'px'};
-            padding-right: $btn#{'px'};
-          }
-        }
+      }
+      &.btn-v-#{$btn} {
+        padding-top: $btn#{'px'};
+        padding-bottom: $btn#{'px'};
+
       }
     }
   }

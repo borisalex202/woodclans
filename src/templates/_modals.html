@@ -1,0 +1,127 @@
+@@if ( context.sign_in === "true" ) {
+<div class="modal fade right" id="sign_in">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-head">
+                <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#sign_in">Log in</a>
+                <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#sign_up">Sign up</a>
+                <button type="button" class="modal-close" data-dismiss="modal"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
+            </div>
+
+            <div class="modal-body">
+                <h4 class="modal-title">Welcome back!</h4>
+                <p class="modal-description">Let's get you signed in</p>
+
+                <form action="" class="form-mini">
+                    <div class="form-border">
+                        <div class="form-group">
+                            <input type="text" class="form-control user" placeholder="Username or email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control password" placeholder="Password">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary disabled">Submit</button>
+                    <div class="or">or</div>
+                    <a href="#" class="login-fb"><img src="img/login-fb.png" alt=""></a>
+                    
+                    <div class="form-footer">
+                        <div class="form-error">Invalid email or password</div>
+                        <a href="#" class="text-gray" data-toggle="modal" data-dismiss="modal" data-target="#forgot_password">Forgot your password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('input').keyup(function () {
+       if( $('.user').val().length > 0 && $('.password').val().length > 0 ) {
+           $('#sign_in').find('.disabled').removeClass('disabled');
+       }
+    });
+</script>
+}
+@@if ( context.sign_up === "true" ) {
+<div class="modal fade right" id="sign_up">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-head">
+                <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#sign_in">Log in</a>
+                <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#sign_up">Sign up</a>
+                <button type="button" class="modal-close" data-dismiss="modal"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
+            </div>
+
+            <div class="modal-body">
+                <h4 class="modal-title">Create an account</h4>
+
+                <form action="" class="form-mini">
+                    <div class="form-border">
+                        <div class="form-group">
+                            <input type="text" class="form-control user_up" placeholder="Username ">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control email_up" placeholder="E-mail">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control password_up" placeholder="Password">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary disabled">Submit</button>
+                    <div class="or">or</div>
+                    <a href="#" class="login-fb"><img src="img/login-fb.png" alt=""></a>
+
+                    <div class="form-footer">
+                        <a href="#" class="text-gray" data-toggle="modal" data-dismiss="modal" data-target="#forgot_password">Forgot your password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('input').keyup(function () {
+        if( $('.user_up').val().length > 0 && $('.password_up').val().length > 0 && $('.email_up').val().length > 0 ) {
+            $('#sign_up').find('.disabled').removeClass('disabled');
+        }
+    });
+</script>
+}
+@@if ( context.forgot_password === "true" ) {
+<div class="modal fade right" id="forgot_password">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-head">
+                <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#sign_in">Log in</a>
+                <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#sign_up">Sign up</a>
+                <button type="button" class="modal-close" data-dismiss="modal"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
+            </div>
+
+            <div class="modal-body">
+                <h4 class="modal-title">Resent Password</h4>
+                <p class="modal-description">Please enter your email address and we'll send you instructions:</p>
+
+                <form action="" class="form-mini">
+                    <div class="form-border">
+                        <div class="form-group">
+                            <input type="text" class="form-control email_forgot_password" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary disabled">Submit</button>
+
+                    <div class="form-footer">
+                        <a href="#" class="text-gray" data-toggle="modal" data-dismiss="modal" data-target="#sign_in">Back</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('input').keyup(function () {
+        if( $('.email_forgot_password').val().length > 0 ) {
+            $('#forgot_password').find('.disabled').removeClass('disabled');
+        }
+    });
+</script>
+}

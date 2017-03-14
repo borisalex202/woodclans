@@ -1,7 +1,9 @@
 @@include('templates/_head.html', {
-	"title": "Woodclans - Feed"
+"title": "Woodclans - Feed"
 })
-@@include('templates/_header.html')
+@@include('templates/_header.html', {
+"root": "false"
+})
 
 			<div class="container flex flex-wrap inside-40">
 				<div class="content">
@@ -284,7 +286,7 @@
 								<li><a href="#">Likes</a></li>
 								<li><a href="clans.html">Clans</a></li>
 								<li><a href="topics.html">Topics</a></li>
-								<li><a href="#">Settings</a></li>
+								<li><a href="settings.html">Settings</a></li>
 							</ul>
 						</div>
 					</aside>
@@ -292,6 +294,11 @@
 			</div>
 
 @@include('templates/_footer.html')
+@@include('templates/_modals.html', {
+"sign_in": "true",
+"sign_up": "true",
+"forgot_password": "true"
+})
 			<script src="https://player.vimeo.com/api/player.js"></script>
 			<script>
 				var pl_elems = {

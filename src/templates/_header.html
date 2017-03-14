@@ -29,6 +29,7 @@
                     </div>
                     <a href="index.html" class="logo logo-mob"><svg class="icon icon-logo-mob"><use xlink:href="#icon-logo-mob"></use></svg></a>
                     <div class="right">
+                        @@if ( !context.root ) {
                         <div class="dropdown">
                             <a class="dropdown-toggle alerts-btn" type="button" id="alerts" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                 <span class="hidden-xs hidden-sm">Alerts <span class="count">+22</span></span>
@@ -141,12 +142,27 @@
                                     <li class="hidden-md hidden-lg"><a href="#">Likes</a></li>
                                     <li class="hidden-md hidden-lg"><a href="#">Clans</a></li>
                                     <li class="hidden-md hidden-lg"><a href="#">Topics</a></li>
-                                    <li><a href="#">Settings</a></li>
+                                    <li><a href="settings.html">Settings</a></li>
                                     <li><a href="#">Help</a></li>
                                     <li><a href="#">Log out</a></li>
                                 </ul>
                             </div>
                         </div>
+                        }
+                        @@if ( context.root === 'false' ) {
+                        <div class="dropdown">
+                            <a href="#" data-toggle="modal" data-target="#sign_in">
+                                <span class="hidden-xs hidden-sm">Log in</span>
+                                <span class="hidden-md hidden-lg"><i class="fa fa-sign-in"></i></span>
+                            </a>
+                        </div>
+                        <div class="dropdown">
+                            <a href="#" data-toggle="modal" data-target="#sign_up">
+                                <span class="hidden-xs hidden-sm">Sign up</span>
+                                <span class="hidden-md hidden-lg"><i class="fa fa-user-plus"></i></span>
+                            </a>
+                        </div>
+                        }
                     </div>
                 </div>
             </header>

@@ -47,6 +47,8 @@ select {
 }
 select {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 textarea {
   padding: 6px 10px;
@@ -63,5 +65,43 @@ a {
 .text {
   &-gray {
     color: $gray-color;
+  }
+  &-black {
+    color: $text-color;
+  }
+}
+.checkbox {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  margin-right: 25px;
+  padding-left: 25px;
+  @include transition(all .3s ease);
+
+  input {
+    display: none;
+
+    &:checked {
+      ~ .text {
+        color: $text-color;
+      }
+      ~ .icn {
+        background: url('../img/svg/check.svg') no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  .icn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    @include transition(all .3s ease);
+  }
+  .text {
+    color: $gray-color;
+    @include transition(all .3s ease);
   }
 }

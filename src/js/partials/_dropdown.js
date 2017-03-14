@@ -17,3 +17,9 @@ $(document).mouseup(function (e){
         el.closest('.dropdown').removeClass('open');
     }
 });
+
+$('.dropdown').on('click', function () {
+    elements.siteHeader.removeClass('active-search');
+    elements.siteHeader.removeClass('active-menu');
+    elements.overlay.removeClass('active');
+});

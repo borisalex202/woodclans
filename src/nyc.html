@@ -16,13 +16,33 @@
 				</div>
 			</div>
 			<div class="container flex flex-wrap inside-40">
-				<div class="author-bio mobile">
-					<img src="img/avatar.png" alt="">
-					<div class="author-info">
-						<p class="name">Clan Leader</p>
-						<a href="#">Slava Budnik</a>
+				<div class="sidebar-mobile">
+					<div class="author-bio mobile">
+						<img src="img/avatar.png" alt="">
+						<div class="author-info">
+							<p class="name">Clan Leader</p>
+							<a href="#">Slava Budnik</a>
+						</div>
+						<p class="author-content">I think it is only fair and after subjecting over 60 shed subjects and counting, that I become <a href="#" class="more">More</a></p>
 					</div>
-					<p class="author-content">I think it is only fair and after subjecting over 60 shed subjects and counting, that I become <a href="#" class="more">More</a></p>
+					<div class="share-aside">
+						<h3>Share & Promote</h3>
+						<div class="">
+							<div class="share-block"></div>
+						</div>
+						<div class="dropdown right-center">
+							<a class="dropdown-toggle btn btn-default black" type="button" id="profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								Invite
+							</a>
+							<div class="dropdown-menu share">
+								<ul>
+									<li><a href="#">Woodclans members</a></li>
+									<li><a href="#">Email</a></li>
+									<li><a href="#">Copy the link</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="content">
 					<div class="feed">
@@ -298,15 +318,35 @@
 						</div>
 						<p class="author-content">I think it is only fair and after subjecting over 60 shed subjects and counting, that I become a subject of my own photography in my shed. In taking this photo I had 2 great helpers my beautiful daughters Eliza and Alexandria</p>
 					</aside>
-					<aside class="ex-video">
-						<h3>Similar topics</h3>
-						<ul class="topics-similar">
-							<li><a href="#">DIY</a></li>
-							<li><a href="knowledge.html">Knowledge Base</a></li>
-							<li><a href="#">Furniture</a></li>
-							<li><a href="#">Creative</a></li>
-						</ul>
-					</aside>
+					<div class="sticky">
+						<aside class="share-aside">
+							<h3>Share & Promote</h3>
+							<div class="">
+								<div class="share-block"></div>
+							</div>
+							<div class="dropdown right-center">
+								<a class="dropdown-toggle btn btn-default black" type="button" id="profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+									Invite
+								</a>
+								<div class="dropdown-menu share">
+									<ul>
+										<li><a href="#">Woodclans members</a></li>
+										<li><a href="#">Email</a></li>
+										<li><a href="#">Copy the link</a></li>
+									</ul>
+								</div>
+							</div>
+						</aside>
+						<aside class="ex-video">
+							<h3>Similar topics</h3>
+							<ul class="topics-similar">
+								<li><a href="#">DIY</a></li>
+								<li><a href="knowledge.html">Knowledge Base</a></li>
+								<li><a href="#">Furniture</a></li>
+								<li><a href="#">Creative</a></li>
+							</ul>
+						</aside>
+					</div>
 				</div>
 			</div>
 
@@ -335,6 +375,16 @@
 						color: '2A265B'
 					});
 				}
+
+                $('.share-block').jsSocials({
+                    shares: ["facebook", "googleplus", "twitter"]
+                });
+
+                $('.sticky').stick_in_parent({
+                    parent: $(".sidebar"),
+                    inner_scrolling: !0,
+                    offset_top: 60
+                })
 
 			</script>
 @@include('templates/_end.html')

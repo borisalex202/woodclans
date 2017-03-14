@@ -469,6 +469,11 @@
       left: 10px;
     }
   }
+  .done {
+    float: right;
+    position: relative;
+    top: -7px;
+  }
   @media (max-width: $screen-sm-max) {
     &-name {
       font-size: 50px;
@@ -479,6 +484,9 @@
     padding: 40px 0 0;
     background: #fff;
 
+    &.save-pb {
+      padding-bottom: 40px;
+    }
     &-info {
 
       &.followers {
@@ -496,6 +504,15 @@
       font-size: 32px;
       line-height: 42px;
       margin-bottom: 20px;
+    }
+    .back {
+      top: -20px
+    }
+    .done {
+      float: none;
+      top: 0;
+      margin-bottom: 20px;
+      display: inline-block;
     }
   }
 }
@@ -613,7 +630,7 @@
     li {
       display: inline-block;
       vertical-align: top;
-      margin: 0 8px;
+      margin: 0 8px 0 0;
 
       &.active {
         a {
@@ -621,7 +638,8 @@
         }
       }
       a {
-        font-weight: 500;
+        font-weight: 400;
+        padding: 0;
       }
     }
   }
@@ -639,5 +657,34 @@
   .icon {
     max-width: 8px;
     max-height: 15px;
+  }
+}
+.share-aside {
+  .dropdown {
+    width: 100%;
+  }
+  .btn {
+    padding: 6px;
+    width: 100%;
+    margin-top: 15px;
+  }
+  @media (max-width: $screen-sm-max) {
+    text-align: center;
+
+    .btn {
+      max-width: 210px;
+      margin: 15px auto 0;
+      padding: 10px;
+    }
+    .dropdown.right-center .dropdown-menu {
+      top: 100%;
+      right: 0;
+      left: 0;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
   }
 }

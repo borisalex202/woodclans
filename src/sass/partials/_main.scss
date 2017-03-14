@@ -108,6 +108,25 @@ body {
   width: 240px;
   margin: 0 0 0 auto;
 
+  &-mobile {
+    display: none;
+    width: 100%;
+    margin-bottom: 20px;
+
+    > div {
+      padding: 15px 25px;
+      margin: 0 -15px;
+      margin-bottom: 0 !important;
+
+      &:last-child {
+        padding-bottom: 20px;
+        border-bottom: 1px solid $border-color;
+      }
+      h3 {
+        display: none;
+      }
+    }
+  }
   aside {
     margin-bottom: 40px;
 
@@ -120,6 +139,9 @@ body {
   @media (max-width: $screen-sm-max) {
     display: none;
 
+    &-mobile {
+      display: block;
+    }
     &.show-mobile {
       display: block;
       width: 100%;
@@ -188,4 +210,10 @@ body {
 }
 .relative {
   position: relative;
+}
+.or {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  margin: 18px 0;
 }

@@ -66,10 +66,17 @@
         }
     });
 
-    $('[data-toggle-class]').on('click', function () {
+    $('[data-toggle-class]').on('click', function (e) {
+        e.preventDefault();
         var getClass = $(this).data('toggle-class');
 
        $(this).toggleClass(getClass);
+    });
+    $('[data-toggle-element]').on('click', function (e) {
+        e.preventDefault();
+        var getEl = $(this).data('toggle-element');
+
+       $(getEl).slideToggle();
     });
     $('.icon-menu').on('click', function () {
         elements.siteHeader.removeClass('active-search');
@@ -96,11 +103,6 @@
         if(options.documentWidth <= 991 ) {
             elements.searchResult.slideDown();
         }
-    });
-    $('.dropdown').on('click', function () {
-        elements.siteHeader.removeClass('active-search');
-        elements.siteHeader.removeClass('active-menu');
-        elements.overlay.removeClass('active');
     });
 
     elements.overlay.on('click', function () {
@@ -195,6 +197,40 @@
         });
     }
 
+    $('input, textarea')
+        .each(function(){
+            if ($(this).val().length > 0) {
+                $(this).addClass('active').closest('.form-group').addClass('active');
+            }
+        })
+        .blur(function() {
+            if (!$(this).val()) {
+                $(this).closest('.form-group').removeClass('active');
+            }
+        })
+        .focus(function() {
+            $(this).closest('.form-group').addClass('active')
+        })
+        .change(function(){
+            var el = $(this);
+            if (el.val()) {
+                el.addClass('active');
+                el.closest('.form-group').addClass('active');
+            } else {
+                el.removeClass('active');
+                el.closest('.form-group').removeClass('active');
+            }
+        });
+
+    $('[data-autoresize]').each(function () {
+        var offset = this.offsetHeight - this.clientHeight;
+
+        var resizeTextarea = function(el) {
+            $(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+        };
+        $(this).on('keyup input', function() { resizeTextarea(this); }).removeAttr('data-autoresize');
+    });
+
     function getMaxWidthTrack() {
         if(options.documentWidth > 1199) {
             return options.summaryWidthClans + (options.mlContainer + options.contProfileMR + 5);
@@ -204,5 +240,21 @@
             return options.summaryWidthClans;
         }
     }
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.form-group.image img').attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $('.form-group.image input').change(function(){
+        readURL(this);
+    });
 
 })(jQuery);
