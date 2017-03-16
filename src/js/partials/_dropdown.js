@@ -21,5 +21,7 @@ $(document).mouseup(function (e){
 $('.dropdown').on('click', function () {
     elements.siteHeader.removeClass('active-search');
     elements.siteHeader.removeClass('active-menu');
-    elements.overlay.removeClass('active');
+    if(!$(this).hasClass('overlay-open')) {
+        elements.overlay.removeClass('active');
+    }
 });

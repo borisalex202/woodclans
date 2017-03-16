@@ -29,7 +29,7 @@
 					<h3>Slava’s clans</h3>
 				</div>
 				<div class="sidebar show-mobile-inline">
-					<a href="#">Create</a>
+					<a href="#" data-toggle="modal" data-target="#create_post">Create</a>
 				</div>
 			</div>
 			<div class="slider-clans">
@@ -493,6 +493,9 @@
 			</div>
 
 @@include('templates/_footer.html')
+@@include('templates/_modals.html', {
+"create_post": "true"
+})
 			<script src="https://player.vimeo.com/api/player.js"></script>
 			<script>
 				var pl_elems = {

@@ -1,1 +1,38 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700,800');
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700,800');
+
+font-face {
+  font-family: 'Soleil';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Soleil ExtraBlack'), local('Soleil-ExtraBlack'), url('../fonts/Soleil_Extra_Bold_Typeface.otf') format('otf');
+}
+@font-face {
+  font-family: 'Soleil';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Soleil XBlack'), local('Soleil-XBlack'), url('../fonts/Soleil_Bold_Typeface.otf') format('otf');
+}
+@font-face {
+  font-family: 'Soleil';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Soleil Bold'), local('Soleil-Bold'), url('../fonts/Soleil_Black_Typeface.otf') format('otf');
+}
+@font-face {
+  font-family: 'Soleil';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Soleil Medium'), local('Soleil-Medium'), url('../fonts/Soleil_Semi_Bold_Typeface.otf') format('otf');
+}
+@font-face {
+  font-family: 'Soleil';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Soleil'), local('Soleil-Regular'), url('../fonts/Soleil_Typeface.otf') format('otf');
+}
+@font-face {
+  font-family: 'Soleil';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Soleil Light'), local('Soleil-Light'), url('../fonts/Soleil_Light_Typeface.otf') format('otf');
+}

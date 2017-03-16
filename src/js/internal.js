@@ -19,11 +19,13 @@
         summaryWidthClans:  0,
         jspContainerHeight: elements.jspContainer.height(),
         contProfileML:      parseInt($('.container.profile').css('margin-left')),
-        contProfileMR:      parseInt($('.container.profile').css('margin-right')) + parseInt($('.container.profile').css('padding-right'))
+        contProfileMR:      parseInt($('.container.profile').css('margin-right')) + parseInt($('.container.profile').css('padding-right')),
+        scrollbarWidth:     scrollbarWidth()
     };
 
     @@include('./partials/_dropdown.js')
     @@include('./partials/_tab.js')
+    @@include('./partials/_modal.js')
 
     $(window).resize(function () {
         options.documentWidth = $('body').width();
@@ -31,7 +33,6 @@
         options.contProfileML = parseInt($('.container.profile').css('margin-left'));
         options.contProfileMR = parseInt($('.container.profile').css('margin-right')) + parseInt($('.container.profile').css('padding-right'));
         options.mlContainer = ( options.documentWidth > 1199 ? options.contProfileML + 95 : $('.container.profile').css('margin-left') );
-
 
         if($('div').is(elements.sliderClans)) {
             elements.sliderClans.find('.slick-track').css({
@@ -231,6 +232,10 @@
         $(this).on('keyup input', function() { resizeTextarea(this); }).removeAttr('data-autoresize');
     });
 
+    $('.form-group.image input').change(function(){
+        readURL(this);
+    });
+
     function getMaxWidthTrack() {
         if(options.documentWidth > 1199) {
             return options.summaryWidthClans + (options.mlContainer + options.contProfileMR + 5);
@@ -240,6 +245,7 @@
             return options.summaryWidthClans;
         }
     }
+
     function readURL(input) {
 
         if (input.files && input.files[0]) {
@@ -253,8 +259,11 @@
         }
     }
 
-    $('.form-group.image input').change(function(){
-        readURL(this);
-    });
+    function scrollbarWidth() {
+        var documentWidth = parseInt(document.documentElement.clientWidth);
+        var windowsWidth = parseInt(window.innerWidth);
+        var scrollbarWidth = windowsWidth - documentWidth;
+        return scrollbarWidth;
+    }
 
 })(jQuery);

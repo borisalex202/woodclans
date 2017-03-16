@@ -398,29 +398,29 @@
       .icon-check {
         display: block;
         position: absolute;
-        top: 7px;
-        left: 5px;
-        max-width: 20px;
-        max-height: 20px;
+        top: -7px;
+        left: -7px;
+        max-width: 50px;
+        max-height: 50px;
         @include transition(all .3s ease);
       }
       .icon-cross {
         display: block;
         position: absolute;
-        top: 9px;
-        left: 6px;
-        max-width: 17px;
-        max-height: 17px;
+        top: -8px;
+        left: -7px;
+        max-width: 50px;
+        max-height: 50px;
         @include opacity(0);
         @include transition(all .3s ease);
       }
     }
     &.follow {
       .icon-check {
-        top: 6px;
+        top: -8x;
       }
       .icon-cross {
-        top: 7px;
+        top: -9px;
       }
     }
     &.create-new {

@@ -25,8 +25,8 @@
     }
   }
   &-cross {
-    max-width: 42px;
-    max-height: 30px;
+    max-width: 50px;
+    max-height: 50px;
     color: $text-color;
     cursor: pointer;
     position: relative;
@@ -115,7 +115,7 @@
     }
   }
   &-check {
-    max-width: 32px;
-    max-height: 32px;
+    max-width: 52px;
+    max-height: 52px;
   }
 }

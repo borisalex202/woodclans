@@ -1,25 +1,48 @@
 .modal {
-  position: absolute;
+  position: fixed;
+  z-index: 1050;
+  display: inherit !important;
 
   &.right {
     top: 0;
     bottom: 0;
-    right: -100%;
+    right: 0;
     left: inherit;
     max-width: 535px;
     width: 100%;
     min-height: 100vh;
     overflow: auto;
-    @include transition(all .4s ease);
+    margin: 0;
+    @include opacity(1);
+    @include translate(100%, 0);
+    @include transition(all .4s ease-out);
   }
   &.in {
     &.right {
       right: 0;
+      @include translate(0, 0);
     }
+  }
+  &-open {
+    overflow: hidden;
   }
   &-dialog {
     width: auto;
     margin: 0;
+    background: #fff;
+    @include translate(0, 0);
+  }
+  &-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $zindex-modal-background;
+    background-color: $modal-backdrop-bg;
+    // Fade for backdrop
+    &.fade { @include opacity(0); }
+    &.in { @include opacity($modal-backdrop-opacity); }
   }
   &-content {
     min-height: 100vh;
@@ -31,6 +54,10 @@
     @include flexbox();
     @include flex-wrap(wrap);
     //@include align-items(center);
+
+    &.no-p {
+      padding: 40px 0 0 0;
+    }
   }
   &-close {
     position: absolute;
@@ -40,16 +67,23 @@
     background: transparent;
     padding: 0;
     margin: 0;
+    max-width: 30px;
+    max-height: 30px;
+    overflow: hidden;
 
     .icon {
-      max-width: 25px;
-      max-height: 25px;
+      max-width: 72px;
+      max-height: 72px;
+      position: relative;
+      top: -20px;
+      left: -20px;
     }
   }
   &-body {
     width: 100%;
     margin: 0;
     text-align: center;
+    padding: 30px;
   }
   &-head {
     padding: 10px 22px;
@@ -84,7 +118,44 @@
   }
   @media (max-width: $screen-xs-max) {
     &-content {
-      padding: 60px 0 0 0;
+      padding: 30px 0 0 0;
+    }
+    &-backdrop {
+      top: 40px;
+    }
+    &-head {
+      text-align: center;
+      @include flexbox();
+      @include justify-content(center);
+
+      a {
+        border-left: 0;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+    &-close {
+      left: auto;
+      right: 10px;
+      top: -35px;
+      overflow: initial;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 30px;
+        background: #fff;
+      }
+    }
+    &.right {
+      overflow: initial;
+      top: 40px;
+      max-width: none;
     }
   }
 }
