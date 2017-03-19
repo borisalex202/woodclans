@@ -1,6 +1,10 @@
 @@include('templates/_head.html', {
 "title": "Woodclans - My page"
 })
+@@include('templates/_modals.html', {
+"create_clan": "true",
+"repost": "true"
+})
 @@include('templates/_header.html')
 
 			<div class="profile-head" style="background-image: url('./img/profile-bg-big.jpg')">
@@ -24,12 +28,18 @@
 					</div>
 				</div>
 			</div>
+			<div class="author-bio mobile my-page">
+				<h3>About</h3>
+				<p class="author-content no-mb no-mt">I think it is only fair and after subjecting over 60 shed subjects and counting, that I become a subject of my own photography in my shed. In taking this photo I had 2 great helpers my beautiful daughters Eliza and Alexandria</p>
+				<div><a href="#" class="link">www.budnik.by</a></div>
+				<div><span class="text-gray">USA, Orlando</span></div>
+			</div>
 			<div class="container indent flex flex-wrap inside-30 profile">
 				<div class="">
 					<h3>Slava’s clans</h3>
 				</div>
 				<div class="sidebar show-mobile-inline">
-					<a href="#" data-toggle="modal" data-target="#create_post">Create</a>
+					<a href="#" data-toggle="modal" data-target="#create_clan">Create</a>
 				</div>
 			</div>
 			<div class="slider-clans">
@@ -41,6 +51,7 @@
 					</div>
 					<div class="clan-content">
 						<a href="#" class="name">Lowrider</a>
+						<a href="#" class="category">Design & Art</a>
 						<p class="followers">158 followers</p>
 						<span class="heading-info join">
 							<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
@@ -57,6 +68,7 @@
 					</div>
 					<div class="clan-content">
 						<a href="#" class="name">Lowrider</a>
+						<a href="#" class="category">Design & Art</a>
 						<p class="followers">158 followers</p>
 						<span class="heading-info join">
 							<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
@@ -73,6 +85,7 @@
 					</div>
 					<div class="clan-content">
 						<a href="#" class="name">Lowrider</a>
+						<a href="#" class="category">Design & Art</a>
 						<p class="followers">158 followers</p>
 						<span class="heading-info join">
 							<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
@@ -89,6 +102,7 @@
 					</div>
 					<div class="clan-content">
 						<a href="#" class="name">Lowrider</a>
+						<a href="#" class="category">Design & Art</a>
 						<p class="followers">158 followers</p>
 						<span class="heading-info join not">
 							<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
@@ -105,6 +119,7 @@
 					</div>
 					<div class="clan-content">
 						<a href="#" class="name">Lowrider</a>
+						<a href="#" class="category">Design & Art</a>
 						<p class="followers">158 followers</p>
 						<span class="heading-info join not">
 							<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
@@ -121,6 +136,7 @@
 					</div>
 					<div class="clan-content">
 						<a href="#" class="name">Lowrider</a>
+						<a href="#" class="category">Design & Art</a>
 						<p class="followers">158 followers</p>
 						<span class="heading-info join not">
 							<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
@@ -137,6 +153,7 @@
 					</div>
 					<div class="clan-content">
 						<a href="#" class="name">Lowrider</a>
+						<a href="#" class="category">Design & Art</a>
 						<p class="followers">158 followers</p>
 						<span class="heading-info join not">
 							<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
@@ -153,6 +170,7 @@
 					</div>
 					<div class="clan-content">
 						<a href="#" class="name">Lowrider</a>
+						<a href="#" class="category">Design & Art</a>
 						<p class="followers">158 followers</p>
 						<span class="heading-info join not">
 							<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
@@ -169,6 +187,7 @@
 					</div>
 					<div class="clan-content">
 						<a href="#" class="name">Lowrider</a>
+						<a href="#" class="category">Design & Art</a>
 						<p class="followers">158 followers</p>
 						<span class="heading-info join not">
 							<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
@@ -185,6 +204,7 @@
 					</div>
 					<div class="clan-content">
 						<a href="#" class="name">Lowrider</a>
+						<a href="#" class="category">Design & Art</a>
 						<p class="followers">158 followers</p>
 						<span class="heading-info join not">
 							<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
@@ -201,6 +221,7 @@
 					</div>
 					<div class="clan-content">
 						<a href="#" class="name">Lowrider</a>
+						<a href="#" class="category">Design & Art</a>
 						<p class="followers">158 followers</p>
 						<span class="heading-info join not">
 							<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
@@ -217,6 +238,7 @@
 					</div>
 					<div class="clan-content">
 						<a href="#" class="name">Lowrider</a>
+						<a href="#" class="category">Design & Art</a>
 						<p class="followers">158 followers</p>
 						<span class="heading-info join not">
 							<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
@@ -233,6 +255,7 @@
 					</div>
 					<div class="clan-content">
 						<a href="#" class="name">Lowrider</a>
+						<a href="#" class="category">Design & Art</a>
 						<p class="followers">158 followers</p>
 						<span class="heading-info join not">
 							<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
@@ -249,6 +272,7 @@
 					</div>
 					<div class="clan-content">
 						<a href="#" class="name">Lowrider</a>
+						<a href="#" class="category">Design & Art</a>
 						<p class="followers">158 followers</p>
 						<span class="heading-info join not">
 							<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
@@ -259,12 +283,6 @@
 				</div>
 			</div>
 			<div class="container flex flex-wrap inside-40 profile">
-				<div class="author-bio mobile">
-					<h3>About</h3>
-					<p class="author-content no-mb no-mt">I think it is only fair and after subjecting over 60 shed subjects and counting, that I become a subject of my own photography in my shed. In taking this photo I had 2 great helpers my beautiful daughters Eliza and Alexandria</p>
-					<div><a href="#" class="link">www.budnik.by</a></div>
-					<div><span class="text-gray">USA, Orlando</span></div>
-				</div>
 				<div class="content">
 					<div class="feed">
 						<div class="feed-item">
@@ -287,7 +305,7 @@
 														<svg class="icon icon-messages-full"><use xlink:href="#icon-messages-full"></use></svg>
 														585
 													</span>
-										<span class="tool repost"><a href="#">Repost</a></span>
+										<span class="tool repost"><a href="#" data-toggle="modal" data-target="#repost">Repost</a></span>
 										<span class="tool share">
 														<div class="dropdown right-center">
 															<a class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -337,7 +355,7 @@
 													<svg class="icon icon-messages-full"><use xlink:href="#icon-messages-full"></use></svg>
 														585
 													</span>
-									<span class="tool repost"><a href="#">Repost</a></span>
+									<span class="tool repost"><a href="#" data-toggle="modal" data-target="#repost">Repost</a></span>
 									<span class="tool share">
 														<div class="dropdown right-center">
 															<a class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -374,7 +392,7 @@
 														<svg class="icon icon-messages-full"><use xlink:href="#icon-messages-full"></use></svg>
 														585
 													</span>
-										<span class="tool repost"><a href="#">Repost</a></span>
+										<span class="tool repost"><a href="#" data-toggle="modal" data-target="#repost">Repost</a></span>
 										<span class="tool share">
 														<div class="dropdown right-center">
 															<a class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -424,7 +442,7 @@
 													<svg class="icon icon-messages-full"><use xlink:href="#icon-messages-full"></use></svg>
 														585
 													</span>
-									<span class="tool repost"><a href="#">Repost</a></span>
+									<span class="tool repost"><a href="#" data-toggle="modal" data-target="#repost">Repost</a></span>
 									<span class="tool share">
 														<div class="dropdown right-center">
 															<a class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -493,9 +511,6 @@
 			</div>
 
 @@include('templates/_footer.html')
-@@include('templates/_modals.html', {
-"create_post": "true"
-})
 			<script src="https://player.vimeo.com/api/player.js"></script>
 			<script>
 				var pl_elems = {

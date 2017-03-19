@@ -4,11 +4,30 @@
       &-track {
         @include flexbox();
 
+        &:before,
+        &:after {
+          display: none;
+        }
         @media (max-width: $screen-md-max) {
           margin: 0 -15px 0 15px;
         }
         @media (max-width: $screen-xs-max) {
           margin: 0 12px 0 10px;
+
+          .clan-content {
+            padding-right: 15px;
+
+            .category,
+            .followers {
+              font-size: 13px;
+            }
+            .join {
+              position: relative;
+              top: 0;
+              right: 0;
+              margin-top: 12px
+            }
+          }
         }
       }
       &-list {

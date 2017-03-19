@@ -99,6 +99,17 @@
       margin-bottom: 13px;
       color: $gray-color;
     }
+    .category {
+      display: inline-block;
+      vertical-align: top;
+      color: #b2b2b2;
+      margin-right: 15px;
+
+      ~ .followers {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
     .join {
       padding-top: 6px;
       padding-bottom: 6px;

@@ -28,7 +28,7 @@
 					<div class="share-aside">
 						<h3>Share & Promote</h3>
 						<div class="">
-							<div class="share-block"></div>
+							<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir" data-counter=""></div>
 						</div>
 						<div class="dropdown right-center">
 							<a class="dropdown-toggle btn btn-default black" type="button" id="profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -322,7 +322,7 @@
 						<aside class="share-aside">
 							<h3>Share & Promote</h3>
 							<div class="">
-								<div class="share-block"></div>
+								<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir" data-counter=""></div>
 							</div>
 							<div class="dropdown right-center">
 								<a class="dropdown-toggle btn btn-default black" type="button" id="profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -352,6 +352,8 @@
 
 @@include('templates/_footer.html')
 			<script src="https://player.vimeo.com/api/player.js"></script>
+			<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+			<script src="//yastatic.net/share2/share.js"></script>
 			<script>
 				var pl_elems = {
 					feed_video_1: {
@@ -375,10 +377,6 @@
 						color: '2A265B'
 					});
 				}
-
-                $('.share-block').jsSocials({
-                    shares: ["facebook", "googleplus", "twitter"]
-                });
 
                 $('.sticky').stick_in_parent({
                     parent: $(".sidebar"),

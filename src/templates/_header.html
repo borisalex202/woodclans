@@ -11,9 +11,23 @@
                         <li><a href="topics.html">Topics</a></li>
                     </ul>
                     <button type="submit" class="search-btn static mobile"><svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg></button>
-                    <div class="search-block">
+                    <div class="search-block select2-block white">
                         <form action="">
-                            <input type="search" class="search-input">
+                            <input type="search" class="search-input mobile">
+                            <select class="select2 search-input desk" multiple="multiple">
+                                <option value="">Nick Offerman's</option>
+                                <option value="">Nick Freeman</option>
+                                <option value="">Nick Offe</option>
+                                <option value="">Nick Offer</option>
+                                <option value="">Nick Free</option>
+                            </select>
+                            <script>
+                                $('.search-input.desk').on('select2:open', function (evt) {
+                                    setTimeout(function () {
+                                        $('.select2-results__options').append('<li class="link"><a href="search.html" class="active">See all results</a></li>')
+                                    }, 1);
+                                });
+                            </script>
                             <button type="submit" class="search-btn"><svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg></button>
 
                             <div class="search-result">

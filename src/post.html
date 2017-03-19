@@ -23,7 +23,7 @@
 						<p>This country-style tall clock is much, much easier to build, while still being a grand, stately and impressive piece of furniture. The only tricky part is the top,with those curved moldings, but we’ve come up with some jigs and a building process that makes it almost goof-proof. In essence, this clock is composed of three boxes that are connected with cove moldings.</p>
 					</div>
 					<div class="post-shared">
-						<div id="share"></div>
+						<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir" data-counter=""></div>
 						<span class="heading-info">Embeded</span>
 					</div>
 
@@ -173,6 +173,8 @@
 
 @@include('templates/_footer.html')
 			<script src="https://player.vimeo.com/api/player.js"></script>
+			<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+			<script src="//yastatic.net/share2/share.js"></script>
 			<script>
 				var pl_elems = {
 					feed_video_1: {
@@ -197,9 +199,6 @@
 					} else {
                         $(this).next('.btn').removeClass('active').addClass('disabled');
 					}
-                });
-                $("#share").jsSocials({
-                    shares: ["vkontakte", "facebook", "googleplus", "twitter"]
                 });
 
 			</script>

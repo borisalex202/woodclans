@@ -1,6 +1,9 @@
 @@include('templates/_head.html', {
 "title": "Woodclans - Clans"
 })
+@@include('templates/_modals.html', {
+"create_clan": "true"
+})
 @@include('templates/_header.html')
 
 			<div class="container flex flex-wrap inside-40">
@@ -9,7 +12,7 @@
 						<ul class="clan-links">
 							<li><a href="#">All clans</a></li>
 							<li><a href="#">Managed clans</a></li>
-							<li class="create"><a href="#">Create clan</a></li>
+							<li class="create"><a href="#" data-toggle="modal" data-target="#create_clan">Create clan</a></li>
 						</ul>
 						<div class="clan-container col-2">
 							<div class="clan-item">

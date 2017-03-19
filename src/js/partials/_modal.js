@@ -1,28 +1,52 @@
 $(document).ready(function () {
     currentPR = elements.siteHeader.css('padding-right');
 
-    $('.modal').on('show.bs.modal', function (e) {
-        options.scrollbarWidth = scrollbarWidth();
-        $('body').css({
-            paddingRight: options.scrollbarWidth
+    $('.modal')
+        .on('show.bs.modal', function () {
+            options.scrollbarWidth = scrollbarWidth();
+            $('body').css({
+                paddingRight: options.scrollbarWidth
+            });
+            elements.siteHeader.css({
+                paddingRight: parseInt(currentPR) + options.scrollbarWidth
+            });
+        })
+        .on('hidden.bs.modal', function () {
+            $('body').css({
+                paddingRight: 0
+            });
+            elements.siteHeader.css({
+                paddingRight: currentPR
+            });
         });
-        elements.siteHeader.css({
-            paddingRight: parseInt(currentPR) + options.scrollbarWidth
-        });
+    $('[data-dismiss="modal"]').on('click', function () {
+        console.log('dsfsdfsdf');
+        $(this).closest('.modal').removeClass('in').attr('style', '');
+        $('.modal-backdrop').remove();
     });
-    $('.modal').on('hidden.bs.modal', function (e) {
-        $('body').css({
-            paddingRight: 0
-        });
-        elements.siteHeader.css({
-            paddingRight: currentPR
-        });
+    $('[data-change="modal"]').on('click', function () {
+       var id = $(this).data('target'),
+           currentId = $('.modal.in').attr('id');
+
+       $(id).css({
+           transform: 'translate(0, 0)',
+           opacity: 0
+       });
+       setTimeout(function () {
+           $(id).addClass('in').css({
+               zIndex: 1060,
+               opacity: 1
+           });
+           setTimeout(function () {
+               $('#' + currentId).removeClass('in').attr('style', '');
+           }, 200);
+       }, 200);
     });
     $(document).mouseup(function (e){
         var el = $('.modal');
         if (!el.is(e.target)
-            && el.has(e.target).length === 0) {
-            el.modal('hide');
+            && el.has(e.target).length === 0 && !$(e.target).hasClass('select2-results__option') && !$(e.target).hasClass('select2-dropdown') && !$(e.target).hasClass('modal-close')) {
+            el.modal('hide').removeClass('in').attr('style', '');
         }
     });
 });

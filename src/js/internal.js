@@ -236,6 +236,46 @@
         readURL(this);
     });
 
+    $('.form-control')
+        .each(function () {
+            if($(this).attr('maxlength')) {
+                var length = $(this).attr('maxlength');
+
+                $(this).closest('.form-group').append('<span class="chars">' + length + '</span>');
+            }
+        })
+        .keyup(function () {
+            if($(this).attr('maxlength')) {
+                var maxLength = $(this).attr('maxlength'),
+                    currentChars = $(this).val().length;
+
+                $(this).closest('.form-group').find('.chars').text(maxLength - currentChars);
+            }
+        });
+
+    $('.current-clan').on('click', function () {
+       $(this).closest('.choice-clan').toggleClass('active');
+    });
+    $('.clan-list li ').on('click', function () {
+        $('.clan-list li ').removeClass('active');
+        $(this).addClass('active').closest('.choice-clan').removeClass('active');
+    });
+    $(document).mouseup(function (e){
+        var el = $('.clan-list');
+        if (!el.is(e.target)
+            && el.has(e.target).length === 0) {
+            el.closest('.choice-clan').removeClass('active');
+        }
+    });
+
+    $('.select2').each(function () {
+        var select2Block = $(this).closest('.select2-block');
+
+        $(this).select2({
+            dropdownParent: select2Block
+        });
+    });
+
     function getMaxWidthTrack() {
         if(options.documentWidth > 1199) {
             return options.summaryWidthClans + (options.mlContainer + options.contProfileMR + 5);

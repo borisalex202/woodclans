@@ -73,6 +73,21 @@
         .tool {
           margin-left: 30px;
         }
+        .cross {
+          max-width: 40px;
+          max-height: 40px;
+          margin-top: -10px;
+          margin-left: 20px;
+          overflow: hidden;
+
+          .icon {
+            position: relative;
+            top: -30px;
+            left: -30px;
+            max-width: 100px;
+            max-height: 100px;
+          }
+        }
         @media (max-width: $screen-sm-max) {
           .tool {
             margin-left: 20px;

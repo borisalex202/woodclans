@@ -1,6 +1,12 @@
 @@include('templates/_head.html', {
 "title": "Woodclans - Feed"
 })
+@@include('templates/_modals.html', {
+"sign_in": "true",
+"sign_up": "true",
+"forgot_password": "true",
+"repost": "true"
+})
 @@include('templates/_header.html', {
 "root": "false"
 })
@@ -28,7 +34,7 @@
 											<svg class="icon icon-messages-full"><use xlink:href="#icon-messages-full"></use></svg>
 											585
 										</span>
-										<span class="tool repost"><a href="#">Repost</a></span>
+										<span class="tool repost"><a href="#" data-toggle="modal" data-target="#repost">Repost</a></span>
 										<span class="tool share">
 											<div class="dropdown right-center">
 												<a class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -78,7 +84,7 @@
 										<svg class="icon icon-messages-full"><use xlink:href="#icon-messages-full"></use></svg>
 											585
 										</span>
-									<span class="tool repost"><a href="#">Repost</a></span>
+									<span class="tool repost"><a href="#" data-toggle="modal" data-target="#repost">Repost</a></span>
 									<span class="tool share">
 											<div class="dropdown right-center">
 												<a class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -115,7 +121,7 @@
 											<svg class="icon icon-messages-full"><use xlink:href="#icon-messages-full"></use></svg>
 											585
 										</span>
-										<span class="tool repost"><a href="#">Repost</a></span>
+										<span class="tool repost"><a href="#" data-toggle="modal" data-target="#repost">Repost</a></span>
 										<span class="tool share">
 											<div class="dropdown right-center">
 												<a class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -165,7 +171,7 @@
 										<svg class="icon icon-messages-full"><use xlink:href="#icon-messages-full"></use></svg>
 											585
 										</span>
-									<span class="tool repost"><a href="#">Repost</a></span>
+									<span class="tool repost"><a href="#" data-toggle="modal" data-target="#repost">Repost</a></span>
 									<span class="tool share">
 											<div class="dropdown right-center">
 												<a class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -202,7 +208,7 @@
 											<svg class="icon icon-messages-full"><use xlink:href="#icon-messages-full"></use></svg>
 											585
 										</span>
-										<span class="tool repost"><a href="#">Repost</a></span>
+										<span class="tool repost"><a href="#" data-toggle="modal" data-target="#repost">Repost</a></span>
 										<span class="tool share">
 											<div class="dropdown right-center">
 												<a class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -252,7 +258,7 @@
 										<svg class="icon icon-messages-full"><use xlink:href="#icon-messages-full"></use></svg>
 										585
 									</span>
-									<span class="tool repost"><a href="#">Repost</a></span>
+									<span class="tool repost"><a href="#" data-toggle="modal" data-target="#repost">Repost</a></span>
 									<span class="tool share">
 										<div class="dropdown right-center">
 											<a class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -294,11 +300,6 @@
 			</div>
 
 @@include('templates/_footer.html')
-@@include('templates/_modals.html', {
-"sign_in": "true",
-"sign_up": "true",
-"forgot_password": "true"
-})
 			<script src="https://player.vimeo.com/api/player.js"></script>
 			<script>
 				var pl_elems = {

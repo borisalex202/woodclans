@@ -1,10 +1,10 @@
 @@if ( context.sign_in === "true" ) {
-<div class="modal fade right" id="sign_in">
+<div class="modal fade right mobile-design" id="sign_in">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-head">
-                <a href="#" class="active" data-toggle="modal" data-dismiss="modal" data-target="#sign_in">Log in</a>
-                <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#sign_up">Sign up</a>
+                <a href="#" class="active">Log in</a>
+                <a href="#" data-change="modal" data-target="#sign_up">Sign up</a>
                 <button type="button" class="modal-close" data-dismiss="modal"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
             </div>
 
@@ -27,7 +27,7 @@
                     
                     <div class="form-footer">
                         <div class="form-error">Invalid email or password</div>
-                        <a href="#" class="text-gray" data-toggle="modal" data-dismiss="modal" data-target="#forgot_password">Forgot your password?</a>
+                        <a href="#" class="text-gray" data-change="modal" data-target="#forgot_password">Forgot your password?</a>
                     </div>
                 </form>
             </div>
@@ -43,12 +43,12 @@
 </script>
 }
 @@if ( context.sign_up === "true" ) {
-<div class="modal fade right" id="sign_up">
+<div class="modal fade right mobile-design" id="sign_up">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-head">
-                <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#sign_in">Log in</a>
-                <a href="#" class="active" data-toggle="modal" data-dismiss="modal" data-target="#sign_up">Sign up</a>
+                <a href="#" data-change="modal" data-target="#sign_in">Log in</a>
+                <a href="#" class="active">Sign up</a>
                 <button type="button" class="modal-close" data-dismiss="modal"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
             </div>
 
@@ -72,7 +72,7 @@
                     <a href="#" class="login-fb"><img src="img/login-fb.png" alt=""></a>
 
                     <div class="form-footer">
-                        <a href="#" class="text-gray" data-toggle="modal" data-dismiss="modal" data-target="#forgot_password">Forgot your password?</a>
+                        <a href="#" class="text-gray" data-change="modal" data-target="#forgot_password">Forgot your password?</a>
                     </div>
                 </form>
             </div>
@@ -88,12 +88,12 @@
 </script>
 }
 @@if ( context.forgot_password === "true" ) {
-<div class="modal fade right" id="forgot_password">
+<div class="modal fade right mobile-design" id="forgot_password">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-head">
-                <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#sign_in">Log in</a>
-                <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#sign_up">Sign up</a>
+                <a href="#" data-change="modal" data-target="#sign_in">Log in</a>
+                <a href="#" data-change="modal" data-target="#sign_up">Sign up</a>
                 <button type="button" class="modal-close" data-dismiss="modal"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
             </div>
 
@@ -110,7 +110,7 @@
                     <button type="submit" class="btn btn-primary disabled">Submit</button>
 
                     <div class="form-footer">
-                        <a href="#" class="text-gray" data-toggle="modal" data-dismiss="modal" data-target="#sign_in">Back</a>
+                        <a href="#" class="text-gray" data-change="modal" data-target="#sign_in">Back</a>
                     </div>
                 </form>
             </div>
@@ -123,5 +123,302 @@
             $('#forgot_password').find('.disabled').removeClass('disabled');
         }
     });
+</script>
+}
+@@if ( context.create_post === "true" ) {
+<div class="modal fade right create-post add" id="create_post">
+    <div class="modal-dialog">
+        <div class="modal-content no-p">
+            <form action="">
+                <div class="modal-head">
+                    <button type="submit" data-dismiss="modal" class="btn btn-primary done disabled">Done</button>
+                    <button type="button" class="modal-close" data-dismiss="modal"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
+                </div>
+
+                <div class="modal-body">
+                    <h4 class="modal-title">Create a post</h4>
+                    <div class="choice-clan">
+                        <p class="current-clan">to myperfectclan</p>
+                        <ul class="clan-list">
+                            <li>
+                                <div class="clan-list-thumb">
+                                    <img src="img/clan1.png" alt="">
+                                </div>
+                                <div class="clan-list-info">
+                                    <p>NYC Woodworkers<span>Guild</span></p>
+                                </div>
+                            </li>
+                            <li class="active">
+                                <div class="clan-list-thumb">
+                                    <img src="img/clan2.png" alt="">
+                                </div>
+                                <div class="clan-list-info">
+                                    <p>MyPerfectClan </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clan-list-thumb">
+                                    <img src="img/clan3.png" alt="">
+                                </div>
+                                <div class="clan-list-info">
+                                    <p>NYC Woodworkers<span>Guild</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clan-list-thumb">
+                                    <img src="img/clan4.png" alt="">
+                                </div>
+                                <div class="clan-list-info">
+                                    <p>NYC Woodworkers<span>Guild</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clan-list-thumb">
+                                    <img src="img/clan5.png" alt="">
+                                </div>
+                                <div class="clan-list-info">
+                                    <p>NYC Woodworkers<span>Guild</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                        <div class="form-group upload-video">
+                            <p class="title">Upload a video</p>
+                            <input type="text" class="form-control video-create_post" placeholder="or paste URL">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" maxlength="50" class="form-control title-create_post">
+                            <span class="form-placeholder">Title</span>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea data-autoresize rows="1" class="form-control description-create_post fs-15"></textarea>
+                            <span class="form-placeholder">Description</span>
+                        </div>
+                        <label class="form-group select-tag select2-block">
+                            <span class="text">+ Add topics</span>
+                            <select class="select2 form-control" multiple="multiple">
+                                <option value="">Anthropocene</option>
+                                <option value="">Anthropology</option>
+                                <option value="">Ants</option>
+                                <option value="">Apes</option>
+                                <option value="">DIY</option>
+                                <option value="">Knowledge Base</option>
+                            </select>
+                        </label>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $('input, textarea').keyup(function () {
+        if( $('.video-create_post').val().length > 0 && $('.title-create_post').val().length > 0 && $('.description-create_post').val().length > 0 ) {
+            $('#create_post').find('.disabled').removeClass('disabled');
+        }
+    });
+</script>
+}
+@@if ( context.create_clan === "true" ) {
+<div class="modal fade right create-clan add" id="create_clan">
+    <div class="modal-dialog">
+        <div class="modal-content no-p">
+            <form action="">
+                <div class="modal-head">
+                    <button type="submit" data-dismiss="modal" class="btn btn-primary done disabled">Done</button>
+                    <button type="button" class="modal-close" data-dismiss="modal"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
+                </div>
+
+                <div class="modal-body">
+                    <h4 class="modal-title">Create a clan</h4>
+                    <div class="choice-clan">
+                        <p class="current-clan">to Furniture</p>
+                        <ul class="clan-list">
+                            <li>
+                                <div class="clan-list-thumb">
+                                    <img src="img/clan1.png" alt="">
+                                </div>
+                                <div class="clan-list-info">
+                                    <p>NYC Woodworkers<span>Guild</span></p>
+                                </div>
+                            </li>
+                            <li class="active">
+                                <div class="clan-list-thumb">
+                                    <img src="img/clan2.png" alt="">
+                                </div>
+                                <div class="clan-list-info">
+                                    <p>MyPerfectClan </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clan-list-thumb">
+                                    <img src="img/clan3.png" alt="">
+                                </div>
+                                <div class="clan-list-info">
+                                    <p>NYC Woodworkers<span>Guild</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clan-list-thumb">
+                                    <img src="img/clan4.png" alt="">
+                                </div>
+                                <div class="clan-list-info">
+                                    <p>NYC Woodworkers<span>Guild</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clan-list-thumb">
+                                    <img src="img/clan5.png" alt="">
+                                </div>
+                                <div class="clan-list-info">
+                                    <p>NYC Woodworkers<span>Guild</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="form-group upload-video">
+                        <p class="title">Upload background video or image</p>
+                        <input type="text" class="form-control video-create_clan" placeholder="or paste URL">
+                    </div>
+                    <div class="form-group clan-name">
+                        <input type="text" maxlength="30" class="form-control title-create_clan">
+                        <span class="form-placeholder">Clan name</span>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea data-autoresize rows="1" class="form-control description-create_clan fs-15"></textarea>
+                        <span class="form-placeholder">Description</span>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-title">Who can post?</div>
+                        <label class="checkbox">
+                            <input type="checkbox" name="notifications" checked>
+                            <span class="icn"></span>
+                            <span class="text">All members</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="notifications">
+                            <span class="icn"></span>
+                            <span class="text">Selected members</span>
+                        </label>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $('input, textarea').keyup(function () {
+        if( $('.video-create_clan').val().length > 0 && $('.title-create_clan').val().length > 0 && $('.description-create_clan').val().length > 0 ) {
+            $('#create_clan').find('.disabled').removeClass('disabled');
+        }
+    });
+</script>
+}
+@@if ( context.repost === "true" ) {
+<div class="modal fade right repost add" id="repost">
+    <div class="modal-dialog">
+        <div class="modal-content no-p">
+            <form action="">
+                <div class="modal-head">
+                    <button type="submit" data-dismiss="modal" class="btn btn-primary done">Done</button>
+                    <button type="button" class="modal-close" data-dismiss="modal"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
+                </div>
+
+                <div class="modal-body">
+                    <h4 class="modal-title">Repost</h4>
+                    <div class="choice-clan">
+                        <p class="current-clan">to Furniture</p>
+                        <ul class="clan-list">
+                            <li>
+                                <div class="clan-list-thumb">
+                                    <img src="img/clan1.png" alt="">
+                                </div>
+                                <div class="clan-list-info">
+                                    <p>NYC Woodworkers<span>Guild</span></p>
+                                </div>
+                            </li>
+                            <li class="active">
+                                <div class="clan-list-thumb">
+                                    <img src="img/clan2.png" alt="">
+                                </div>
+                                <div class="clan-list-info">
+                                    <p>MyPerfectClan </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clan-list-thumb">
+                                    <img src="img/clan3.png" alt="">
+                                </div>
+                                <div class="clan-list-info">
+                                    <p>NYC Woodworkers<span>Guild</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clan-list-thumb">
+                                    <img src="img/clan4.png" alt="">
+                                </div>
+                                <div class="clan-list-info">
+                                    <p>NYC Woodworkers<span>Guild</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clan-list-thumb">
+                                    <img src="img/clan5.png" alt="">
+                                </div>
+                                <div class="clan-list-info">
+                                    <p>NYC Woodworkers<span>Guild</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="repost-about">
+                        <div class="thumb"><img src="img/avatar.png" alt=""></div>
+                        <div class="info">
+                            <a href="mypage.html" class="name">Slava Budnik</a>
+                            <p>An Interactive Film About Co-Living Drawing</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group repost-video">
+                        <div id="repost_video"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea data-autoresize rows="5" readonly class="form-control fs-15">For many of us, a grandfather clock is the ultimate project. Traditional high-style clocks often involve such advanced skills as spiral turning, veneering and figure carving, to say nothing of the cost of the figured wood.</textarea>
+                        <span class="form-placeholder">Write about thit post</span>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+    var pl_elems = {
+        repost_video: {
+            id: 59777392
+        }
+    };
+
+    for(pl_elem in pl_elems) {
+        var player = new Vimeo.Player(pl_elem, {
+            id: pl_elems[pl_elem].id,
+            byline: false,
+            title: false,
+            portrait: false,
+            player_id: false,
+            color: '2A265B'
+        });
+    }
 </script>
 }

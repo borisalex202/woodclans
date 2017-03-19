@@ -1,13 +1,16 @@
 @@include('templates/_head.html', {
 "title": "Woodclans - Clans"
 })
+@@include('templates/_modals.html', {
+"create_clan": "true"
+})
 @@include('templates/_header.html')
 
 			<div class="heading bg-white">
 				<div class="container big relative">
 					<a href="javascript:history.back()" class="back">Back</a>
 					<p class="heading-name animate-to-top">Clans</p>
-					<a href="#" class="heading-info create-new">Create new</a>
+					<a href="#" class="heading-info create-new" data-toggle="modal" data-target="#create_clan">Create new</a>
 					<ul class="tab-nav animate-to-top" role="tablist">
 						<li role="presentation" class="active"><a href="#clans" role="tab" data-toggle="tab">Your Clans</a></li>
 						<li role="presentation"><a href="#discover" role="tab" data-toggle="tab">Discover</a></li>
