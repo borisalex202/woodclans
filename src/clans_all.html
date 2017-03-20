@@ -2,7 +2,8 @@
 "title": "Woodclans - Clans"
 })
 @@include('templates/_modals.html', {
-"create_clan": "true"
+"create_clan": "true",
+"create_post": "true"
 })
 @@include('templates/_header.html')
 
@@ -136,5 +137,7 @@
 				</div>
 			</div>
 
-@@include('templates/_footer.html')
+@@include('templates/_footer.html', {
+"main_info": "true"
+})
 @@include('templates/_end.html')

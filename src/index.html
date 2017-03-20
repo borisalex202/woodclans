@@ -5,7 +5,8 @@
 "sign_in": "true",
 "sign_up": "true",
 "forgot_password": "true",
-"repost": "true"
+"repost": "true",
+"create_post": "true"
 })
 @@include('templates/_header.html', {
 "root": "false"
@@ -299,7 +300,9 @@
 				</div>
 			</div>
 
-@@include('templates/_footer.html')
+@@include('templates/_footer.html', {
+"main_info": "true"
+})
 			<script src="https://player.vimeo.com/api/player.js"></script>
 			<script>
 				var pl_elems = {

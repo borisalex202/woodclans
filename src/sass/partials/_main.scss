@@ -135,6 +135,18 @@ body {
       font-weight: 600;
       margin: 0 0 15px 0;
     }
+    &.author-bio {
+      font-size: 13px;
+      line-height: 20px;
+
+      a {
+        font-size: 13px;
+        line-height: 20px;
+      }
+      p {
+        margin-bottom: 5px;
+      }
+    }
   }
   @media (max-width: $screen-sm-max) {
     display: none;

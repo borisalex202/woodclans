@@ -1,6 +1,9 @@
 @@include('templates/_head.html', {
 "title": "Woodclans - Topics"
 })
+@@include('templates/_modals.html', {
+"create_post": "true"
+})
 @@include('templates/_header.html')
 
 			<div class="container flex flex-wrap inside-40">
@@ -131,5 +134,7 @@
 				</div>
 			</div>
 
-@@include('templates/_footer.html')
+@@include('templates/_footer.html', {
+"main_info": "true"
+})
 @@include('templates/_end.html')

@@ -3,6 +3,7 @@
 })
 @@include('templates/_modals.html', {
 "create_clan": "true",
+"create_post": "true",
 "repost": "true"
 })
 @@include('templates/_header.html')
@@ -476,7 +477,9 @@
 				</div>
 			</div>
 
-@@include('templates/_footer.html')
+@@include('templates/_footer.html', {
+"main_info": "true"
+})
 			<script src="https://player.vimeo.com/api/player.js"></script>
 			<script>
 				var pl_elems = {

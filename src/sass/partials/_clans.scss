@@ -69,6 +69,17 @@
     border: 1px solid $border-color;
     border-radius: 2px;
     margin: 0 10px 40px;
+
+    &.video {
+      margin-bottom: 30px;
+
+      p {
+        margin-bottom: 0;
+      }
+      .clan-content {
+        padding: 13px 10px;
+      }
+    }
   }
   &-thumb {
     position: relative;
@@ -92,11 +103,13 @@
 
     .name {
       display: block;
-      margin-bottom: 13px;
+      margin-bottom: 3px;
       font-weight: 500;
+      word-break: break-all;
     }
     .followers {
       margin-bottom: 13px;
+      font-size: 13px;
       color: $gray-color;
     }
     .category {
@@ -104,6 +117,8 @@
       vertical-align: top;
       color: #b2b2b2;
       margin-right: 15px;
+      line-height: 18px;
+      font-size: 13px;
 
       ~ .followers {
         display: inline-block;
@@ -111,8 +126,9 @@
       }
     }
     .join {
-      padding-top: 6px;
-      padding-bottom: 6px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-right: 15px;
       display: inline-block;
     }
   }

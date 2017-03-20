@@ -28,18 +28,16 @@ $(document).ready(function () {
        var id = $(this).data('target'),
            currentId = $('.modal.in').attr('id');
 
-       $(id).css({
-           transform: 'translate(0, 0)',
-           opacity: 0
-       });
+       $('#' + currentId).css('z-index', '-1');
+       $(id)
+           .css({
+               transform: 'translate(0, 0)',
+               transition: 'inherit',
+               zIndex: 1100
+           })
+           .addClass('in');
        setTimeout(function () {
-           $(id).addClass('in').css({
-               zIndex: 1060,
-               opacity: 1
-           });
-           setTimeout(function () {
-               $('#' + currentId).removeClass('in').attr('style', '');
-           }, 200);
+           $('#' + currentId).attr('style', '').removeClass('in');
        }, 200);
     });
     $(document).mouseup(function (e){

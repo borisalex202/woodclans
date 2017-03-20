@@ -79,21 +79,28 @@
     background-repeat: no-repeat;
     @include box-shadow(2px 2px 10px 0 rgba(140,140,140,.3));
 
-    &:hover {
-      background-color: $main-color;
-    }
     &.plus {
       background-image: url('../img/svg/plus.svg');
 
-      &:hover {
+      &:hover,
+      &:active:focus,
+      &:focus,
+      &:active,
+      &:active:hover {
         background-image: url('../img/svg/plus-white.svg');
+        background-color: $main-color;
       }
     }
     &.question {
       background-image: url('../img/svg/question.svg');
 
-      &:hover {
+      &:hover,
+      &:active:focus,
+      &:focus,
+      &:active,
+      &:active:hover {
         background-image: url('../img/svg/question-white.svg');
+        background-color: $main-color;
       }
     }
   }

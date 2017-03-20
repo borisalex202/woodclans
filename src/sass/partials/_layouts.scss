@@ -179,7 +179,7 @@
   &-info {
     display: none;
 
-    @media (max-width: $screen-sm-max) {
+    &.active {
       display: block;
       position: fixed;
       bottom: 25px;
@@ -188,6 +188,8 @@
   }
 }
 .search {
+  position: relative;
+
   &-block {
     position: relative;
     width: 100%;
@@ -342,6 +344,60 @@
       }
     }
   }
+  &-sort {
+    margin-bottom: 15px;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 8px;
+
+      &.active {
+        a {
+          color: $text-color;
+        }
+      }
+      a {
+        font-size: 13px;
+        color: $gray-color;
+      }
+    }
+  }
+  &.active {
+    .message {
+      pointer-events: all;
+      @include opacity(1);
+    }
+  }
+  .message {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    font-size: 32px;
+    line-height: 42px;
+    z-index: 10;
+    pointer-events: none;
+    text-align: center;
+    height: calc(100vh - 40px);
+    padding: 15px 10px;
+    @include transition(all .3s ease);
+    @include opacity(0);
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+  }
+  .heading {
+    padding-bottom: 20px;
+  }
+  @media (max-width: $screen-sm-max) {
+    .message {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
 }
 .overlay {
   position: fixed;
@@ -431,7 +487,7 @@
 
       &.not {
         cursor: pointer;
-        padding-left: 10px;
+        padding-left: 15px;
 
         .icon {
           display: none;
@@ -654,7 +710,13 @@
         margin: 0 -10px 20px;
         border-top: 1px solid $border-color;
         border-bottom: 1px solid $border-color;
+        font-size: 13px;
+        line-height: 20px;
 
+        a {
+          font-size: 13px;
+          line-height: 20px;
+        }
         .author-content {
           .more {
             display: block;

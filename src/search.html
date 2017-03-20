@@ -1,220 +1,269 @@
 @@include('templates/_head.html', {
 "title": "Woodclans - Topics"
 })
+@@include('templates/_modals.html', {
+"create_post": "true"
+})
 @@include('templates/_header.html')
 
-			<div class="heading bg-white save-pb search-page">
-				<div class="container big relative">
-					<a href="javascript:history.back()" class="back">Back</a>
-					<ul class="tab-nav animate-to-top" role="tablist">
-						<li role="presentation" class="active"><a href="#followers" role="tab" data-toggle="tab">Followers</a></li>
-						<li role="presentation"><a href="#following" role="tab" data-toggle="tab">Following</a></li>
-						<li role="presentation"><a href="#everyone" role="tab" data-toggle="tab">Everyone</a></li>
-					</ul>
-					<a href="#" class="heading-info done">Done 6</a>
-					<p class="heading-name animate-to-top">Nick Offerman's</p>
-				</div>
-			</div>
-			<div class="container big flex flex-wrap">
-				<div class="tab-content">
-					<div id="followers" class="tab-pane active">
-						<div class="follower-list col-5">
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow2.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow3.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow1.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow4.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow3.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow4.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow2.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow1.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow1.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow2.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow4.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow3.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow1.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow2.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow4.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow3.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow4.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow3.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow2.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow1.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
+			<div class="search">
+				<div class="message">That’s about it for Nick Offerman's. <br>Try another search?</div>
+				<div class="heading bg-white save-pb">
+					<div class="container big relative">
+						<div class="form-group">
+							<input type="text" class="form-control form-search" placeholder="Search ">
 						</div>
-					</div>
-					<div id="following" class="tab-pane">
-						<div class="follower-list col-5">
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow4.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow3.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow2.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow1.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow1.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-						</div>
-					</div>
-					<div id="everyone" class="tab-pane">
-						<div class="follower-list col-5">
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow4.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow3.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow2.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow1.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-							<a href="#" class="follower-item">
-								<div class="follower-thumb">
-									<img src="img/follow3.png" alt="">
-								</div>
-								<p class="follower-title">Peninger Stacey</p>
-							</a>
-						</div>
+						<ul class="tab-nav animate-to-top" role="tablist">
+							<li role="presentation" class="active"><a href="#videos" role="tab" data-toggle="tab">Videos</a></li>
+							<li role="presentation"><a href="#clans" role="tab" data-toggle="tab">Clans</a></li>
+							<li role="presentation"><a href="#people" role="tab" data-toggle="tab">People</a></li>
+						</ul>
 					</div>
 				</div>
+				<div class="container big flex flex-wrap">
+					<div class="tab-content">
+						<div id="videos" class="tab-pane active">
+							<ul class="search-sort">
+								<li class="active"><a href="#">Date</a></li>
+								<li><a href="#">Most views</a></li>
+								<li><a href="#">Popular</a></li>
+							</ul>
+							<div class="clan-container">
+								<div class="clan-item video">
+									<div class="clan-thumb">
+										<a href="#">
+											<img src="img/clan1.png" alt="">
+										</a>
+									</div>
+									<div class="clan-content">
+										<a href="#" class="name">First video</a>
+										<p class="followers"><a href="#">Nick Offerman's</a> 1d ago 9 856 views</p>
+									</div>
+								</div>
+								<div class="clan-item video">
+									<div class="clan-thumb">
+										<a href="#">
+											<img src="img/clan1.png" alt="">
+										</a>
+									</div>
+									<div class="clan-content">
+										<a href="#" class="name">First video</a>
+										<p class="followers"><a href="#">Nick Offerman's</a> 1d ago 9 856 views</p>
+									</div>
+								</div>
+								<div class="clan-item video">
+									<div class="clan-thumb">
+										<a href="#">
+											<img src="img/clan1.png" alt="">
+										</a>
+									</div>
+									<div class="clan-content">
+										<a href="#" class="name">First video</a>
+										<p class="followers"><a href="#">Nick Offerman's</a> 1d ago 9 856 views</p>
+									</div>
+								</div>
+								<div class="clan-item video">
+									<div class="clan-thumb">
+										<a href="#">
+											<img src="img/clan1.png" alt="">
+										</a>
+									</div>
+									<div class="clan-content">
+										<a href="#" class="name">First video</a>
+										<p class="followers"><a href="#">Nick Offerman's</a> 1d ago 9 856 views</p>
+									</div>
+								</div>
+								<div class="clan-item video">
+									<div class="clan-thumb">
+										<a href="#">
+											<img src="img/clan1.png" alt="">
+										</a>
+									</div>
+									<div class="clan-content">
+										<a href="#" class="name">First video</a>
+										<p class="followers"><a href="#">Nick Offerman's</a> 1d ago 9 856 views</p>
+									</div>
+								</div>
+								<div class="clan-item video">
+									<div class="clan-thumb">
+										<a href="#">
+											<img src="img/clan1.png" alt="">
+										</a>
+									</div>
+									<div class="clan-content">
+										<a href="#" class="name">First video</a>
+										<p class="followers"><a href="#">Nick Offerman's</a> 1d ago 9 856 views</p>
+									</div>
+								</div>
+								<div class="clan-item video">
+									<div class="clan-thumb">
+										<a href="#">
+											<img src="img/clan1.png" alt="">
+										</a>
+									</div>
+									<div class="clan-content">
+										<a href="#" class="name">First video</a>
+										<p class="followers"><a href="#">Nick Offerman's</a> 1d ago 9 856 views</p>
+									</div>
+								</div>
+								<div class="clan-item video">
+									<div class="clan-thumb">
+										<a href="#">
+											<img src="img/clan1.png" alt="">
+										</a>
+									</div>
+									<div class="clan-content">
+										<a href="#" class="name">First video</a>
+										<p class="followers"><a href="#">Nick Offerman's</a> 1d ago 9 856 views</p>
+									</div>
+								</div>
+								<div class="clan-item video">
+									<div class="clan-thumb">
+										<a href="#">
+											<img src="img/clan1.png" alt="">
+										</a>
+									</div>
+									<div class="clan-content">
+										<a href="#" class="name">First video</a>
+										<p class="followers"><a href="#">Nick Offerman's</a> 1d ago 9 856 views</p>
+									</div>
+								</div>
+								<div class="clan-item video">
+									<div class="clan-thumb">
+										<a href="#">
+											<img src="img/clan1.png" alt="">
+										</a>
+									</div>
+									<div class="clan-content">
+										<a href="#" class="name">First video</a>
+										<p class="followers"><a href="#">Nick Offerman's</a> 1d ago 9 856 views</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="clans" class="tab-pane">
+							<div class="clan-container">
+								<div class="clan-item">
+									<div class="clan-thumb">
+										<a href="#">
+											<img src="img/clan1.png" alt="">
+										</a>
+									</div>
+									<div class="clan-content">
+										<a href="#" class="name">Lowrider</a>
+										<p class="followers">158 followers</p>
+										<span class="heading-info join">
+												<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
+												<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+												<span class="text">Joined</span>
+											</span>
+									</div>
+								</div>
+								<div class="clan-item">
+									<div class="clan-thumb">
+										<a href="#">
+											<img src="img/clan2.png" alt="">
+										</a>
+									</div>
+									<div class="clan-content">
+										<a href="#" class="name">Lowrider</a>
+										<p class="followers">158 followers</p>
+										<span class="heading-info join">
+												<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
+												<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+												<span class="text">Joined</span>
+											</span>
+									</div>
+								</div>
+								<div class="clan-item">
+									<div class="clan-thumb">
+										<a href="#">
+											<img src="img/clan3.png" alt="">
+										</a>
+									</div>
+									<div class="clan-content">
+										<a href="#" class="name">Lowrider</a>
+										<p class="followers">158 followers</p>
+										<span class="heading-info join not">
+												<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
+												<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+												<span class="text">Join</span>
+											</span>
+									</div>
+								</div>
+								<div class="clan-item">
+									<div class="clan-thumb">
+										<a href="#">
+											<img src="img/clan4.png" alt="">
+										</a>
+									</div>
+									<div class="clan-content">
+										<a href="#" class="name">Lowrider</a>
+										<p class="followers">158 followers</p>
+										<span class="heading-info join not">
+												<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
+												<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+												<span class="text">Join</span>
+											</span>
+									</div>
+								</div>
+								<div class="clan-item">
+									<div class="clan-thumb">
+										<a href="#">
+											<img src="img/clan5.png" alt="">
+										</a>
+									</div>
+									<div class="clan-content">
+										<a href="#" class="name">Lowrider</a>
+										<p class="followers">158 followers</p>
+										<span class="heading-info join not">
+												<svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
+												<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+												<span class="text">Join</span>
+											</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="people" class="tab-pane">
+							<div class="follower-list col-5">
+								<a href="#" class="follower-item">
+									<div class="follower-thumb">
+										<img src="img/follow4.png" alt="">
+									</div>
+									<p class="follower-title">Peninger Stacey</p>
+								</a>
+								<a href="#" class="follower-item">
+									<div class="follower-thumb">
+										<img src="img/follow3.png" alt="">
+									</div>
+									<p class="follower-title">Peninger Stacey</p>
+								</a>
+								<a href="#" class="follower-item">
+									<div class="follower-thumb">
+										<img src="img/follow2.png" alt="">
+									</div>
+									<p class="follower-title">Peninger Stacey</p>
+								</a>
+								<a href="#" class="follower-item">
+									<div class="follower-thumb">
+										<img src="img/follow1.png" alt="">
+									</div>
+									<p class="follower-title">Peninger Stacey</p>
+								</a>
+								<a href="#" class="follower-item">
+									<div class="follower-thumb">
+										<img src="img/follow3.png" alt="">
+									</div>
+									<p class="follower-title">Peninger Stacey</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
-@@include('templates/_footer.html')
+@@include('templates/_footer.html', {
+"main_info": "true"
+})
 @@include('templates/_end.html')

@@ -3,6 +3,7 @@
 })
 @@include('templates/_modals.html', {
 "create_clan": "true",
+"create_post": "true",
 "repost": "true"
 })
 @@include('templates/_header.html')
@@ -464,7 +465,7 @@
 				<div class="sidebar">
 					<aside class="author-bio">
 						<h3>About</h3>
-						<p class="author-content no-mb no-mt">I think it is only fair and after subjecting over 60 shed subjects and counting, that I become a subject of my own photography in my shed. In taking this photo I had 2 great helpers my beautiful daughters Eliza and Alexandria</p>
+						<p class="author-content no-mt">I think it is only fair and after subjecting over 60 shed subjects and counting, that I become a subject of my own photography in my shed. In taking this photo I had 2 great helpers my beautiful daughters Eliza and Alexandria</p>
 						<div><a href="#" class="link">www.budnik.by</a></div>
 						<div><span class="text-gray">USA, Orlando</span></div>
 					</aside>
@@ -510,7 +511,9 @@
 				</div>
 			</div>
 
-@@include('templates/_footer.html')
+@@include('templates/_footer.html', {
+"main_info": "true"
+})
 			<script src="https://player.vimeo.com/api/player.js"></script>
 			<script>
 				var pl_elems = {

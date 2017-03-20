@@ -13,12 +13,14 @@
     min-height: 100vh;
     overflow: auto;
     margin: 0;
+    @include opacity(1);
     @include translate(100%, 0);
     @include transition(all .4s ease-out);
   }
   &.in {
     &.right {
       right: 0;
+      @include opacity(1);
       @include translate(0, 0);
     }
   }
