@@ -140,6 +140,7 @@
 .main {
   &-menu {
     margin-right: 20px;
+    line-height: 25px;
 
     li {
       display: inline-block;
@@ -165,6 +166,7 @@
       padding: 27px 29px;
       pointer-events: none;
       z-index: 2;
+      line-height: inherit;
       @include opacity(0);
       @include translate(0, -40px);
       @include transition(all .3s ease);

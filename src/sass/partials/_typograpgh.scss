@@ -3,14 +3,14 @@ img {
   height: auto;
 }
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: $link-color;
   @include transition(all .3s ease);
 
   &.hover,
   &:hover {
     color: $link-hover-color;
-    text-decoration: none;
+    text-decoration: none !important;
   }
   &.link {
     color: $main-color;
